@@ -11,9 +11,9 @@
 #  	 private List<Transaction> transactionHistory;
 #  		// Constructors, methods for book and user management, transactions, search, and filter
 
-class Librarian:
-	def __init__ (self, parameters):
-		self.parameters = parameters
+class Library:
+	# def __init__ (self, parameters):
+	# 	self.parameters = parameters
 	#constructor
 
 	#list books function
@@ -27,8 +27,9 @@ class Librarian:
 	
 	#transactions function
 		
-def LibrarianMenu():
-	print
+    def LibrarianMenu():
+        print("Hi")
+    #write menu driven program for all the librarin operations.
 
 
 	
