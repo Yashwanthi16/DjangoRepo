@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Form</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align items to the start */
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        #content {
+            flex: 1; /* Allow the content to grow */
+            max-width: 500px;
+            width: 100%;
+        }
+        #sidebar {
+            margin-left: 20px;
+            max-width: 250px;
+            width: 100%;
+        }
+        form {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="file"],
+        textarea,
+        input[type="datetime-local"] {
+            width: calc(100% - 22px); /* Subtract padding */
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Create a New Blog Post</h1>
+        <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title">
+            
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image">
+            
+            <label for="video">Video:</label>
+            <input type="file" id="video" name="video">
+            
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" cols="50"></textarea>
+            
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author">
+            
+            <label for="created_at">Created At:</label>
+            <input type="datetime-local" id="created_at" name="created_at">
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

@@ -12,9 +12,14 @@
 #  		// Constructors, methods for book and user management, transactions, search, and filter
 
 class Library:
-	# def __init__ (self, parameters):
-	# 	self.parameters = parameters
-	#constructor
+
+	def __init__(self,bookList, userList, transactionHistory):
+		self.bookList = "bookList.txt"
+		self.userList = "userList.txt"
+		self.transactionHistory = []
+
+	def 
+		
 
 	#list books function
 		#read from database
