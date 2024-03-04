@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap-grid.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-grid.css.map'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css.map'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.css.map'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css.map'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css.map'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css.map'%}">
+
+    <title>Hello, peeps!</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            {% comment %} <a class="navbar-brand" href="#">Navbar</a> {% endcomment %}
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'display_blog_data' %}">Display Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'enter_blog_data' %}">New Form</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="scrollToBottom()">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex" action="{% url 'search' %}" method="GET">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2>About the Author</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, libero sed ultrices tincidunt, libero turpis viverra nulla, nec tristique risus ante sit amet est.</p>
+        <hr>
+    </div>
+
+    <div class="container mt-5">
+        <h2>All about Blogs</h2>
+        <p>A blog is a type of website or online platform where individuals or groups regularly publish content in a chronological format.</p>
+        <p>These entries, called blog posts, typically cover a specific topic or range of topics and can include text, images, videos, and other multimedia elements.</p>
+        <h4>Blogs serve various purposes, including:</h4>
+        <ul>
+            <li><strong>Personal Expression:</strong> Many individuals use blogs as a platform to express their thoughts, opinions, experiences, and creative ideas on subjects they are passionate about.</li>
+            <li><strong>Information Sharing:</strong> Blogs are often used to share informative content on specific topics such as technology, travel, fashion, cooking, health, and more. They can provide valuable insights, tips, tutorials, and news updates to readers.</li>
+            <li><strong>Marketing and Business:</strong> In the business world, blogs are commonly used as a marketing tool to promote products, services, or brands. They help companies engage with their target audience, build credibility, and establish authority in their industry.</li>
+            <li><strong>Community Building:</strong> Blogs can foster a sense of community among like-minded individuals who share common interests or goals. Readers can interact with the author and other readers through comments, discussions, and social media sharing.</li>
+            <li><strong>Monetization:</strong> Some bloggers monetize their blogs by displaying advertisements, sponsored content, affiliate links, or by offering premium content or services to subscribers.</li>
+        </ul>
+        <p>Overall, blogs provide a versatile platform for content creation, communication, and engagement on the internet. They play a significant role in shaping online discourse, sharing knowledge, and connecting people across the globe.</p>
+    </div>
+
+    <div class="container mt-5" id="contactSection">
+        <h3>Contact Us</h3>
+        <p>For any inquiries, please feel free to contact us:</p>
+        <p id="phoneNumber">Phone: 9879870987</p>
+        <p id="email">Email: abc@gmail.com</p>
+    </div>
+
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.js.map' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js.map' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js.map' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js.map' %}"></script>
+
+    <script>
+        function scrollToBottom() {
+            document.getElementById('contactSection').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
