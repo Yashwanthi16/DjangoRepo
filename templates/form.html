@@ -64,17 +64,18 @@
     <div class="top-right">
         <a href="{% url 'homepage' %}" class="btn btn-primary">Return to Homepage</a>
     </div>
+
     <div id="content">
         <h1>Create a New Blog Post</h1>
-        <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+        <form action="" method="POST" enctype="multipart/form-data"> {% csrf_token %}
             <label for="title">Title:</label>
             <input type="text" id="title" name="title">
             
             <label for="image">Image:</label>
-            <input type="file" id="image" name="image">
+            <input type="file" id="image" name="image" accept="image/*" required>
             
             <label for="video">Video:</label>
-            <input type="file" id="video" name="video">
+            <input type="file" id="video" name="video" accept="video/*" required>
             
             <label for="description">Description:</label>
             <textarea id="description" name="description" rows="4" cols="50"></textarea>
@@ -89,6 +90,43 @@
 
         </form>
     </div>
-    
+    <script>
+        function validateForm() {
+            // Get references to the file inputs
+            var imageInput = document.getElementById('image');
+            var videoInput = document.getElementById('video');
+            
+            // Validate image file format
+            var imageFileName = imageInput.value;
+            if (imageFileName.trim() !== "" && !isValidImageFormat(imageFileName)) {
+                alert('Please select a valid image file (JPEG, JPG, PNG, GIF).');
+                return false;
+            }
+            
+            // Validate video file format
+            var videoFileName = videoInput.value;
+            if (videoFileName.trim() !== "" && !isValidVideoFormat(videoFileName)) {
+                alert('Please select a valid video file (MP4, MOV, AVI).');
+                return false;
+            }
+            
+            return true; // Form submission will proceed if all validations pass
+        }
+        
+        // Function to validate image file format
+        function isValidImageFormat(fileName) {
+            var validImageFormats = ['jpg', 'jpeg', 'png', 'gif'];
+            var extension = fileName.split('.').pop().toLowerCase();
+            return validImageFormats.includes(extension);
+        }
+        
+        // Function to validate video file format
+        function isValidVideoFormat(fileName) {
+            var validVideoFormats = ['mp4', 'mov', 'avi'];
+            var extension = fileName.split('.').pop().toLowerCase();
+            return validVideoFormats.includes(extension);
+        }
+        
+    </script>
 </body>
 </html>

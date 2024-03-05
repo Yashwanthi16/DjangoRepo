@@ -21,6 +21,49 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css.map'%}">
 
     <title>Hello, peeps!</title>
+      <style>
+        /* Body */
+        body {
+            background-color: #f8f9fa; /* Body background color */
+            color: #333; /* Body text color */
+            font-family: Arial, sans-serif; /* Text font */
+        }
+
+        /* Container */
+        .container {
+            background-color: #ffffff; /* Container background color */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+        }
+
+        /* Headers */
+        h1, h2, h3, h4, h5, h6 {
+            color: #007bff; /* Header text color */
+            font-family: Arial, sans-serif; /* Header font */
+        }
+
+        /* Links */
+        a {
+            color: #007bff; /* Link text color */
+        }
+
+        a:hover {
+            color: #0056b3; /* Link hover color */
+        }
+
+        /* Buttons */
+        .btn {
+            background-color: #007bff; /* Button background color */
+            border-color: #007bff; /* Button border color */
+            color: #fff; /* Button text color */
+        }
+
+        .btn:hover {
+            background-color: #0056b3; /* Button hover background color */
+            border-color: #0056b3; /* Button hover border color */
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -55,12 +98,6 @@
     </nav>
 
     <div class="container mt-5">
-        <h2>About the Author</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, libero sed ultrices tincidunt, libero turpis viverra nulla, nec tristique risus ante sit amet est.</p>
-        <hr>
-    </div>
-
-    <div class="container mt-5">
         <h2>All about Blogs</h2>
         <p>A blog is a type of website or online platform where individuals or groups regularly publish content in a chronological format.</p>
         <p>These entries, called blog posts, typically cover a specific topic or range of topics and can include text, images, videos, and other multimedia elements.</p>
@@ -73,6 +110,12 @@
             <li><strong>Monetization:</strong> Some bloggers monetize their blogs by displaying advertisements, sponsored content, affiliate links, or by offering premium content or services to subscribers.</li>
         </ul>
         <p>Overall, blogs provide a versatile platform for content creation, communication, and engagement on the internet. They play a significant role in shaping online discourse, sharing knowledge, and connecting people across the globe.</p>
+    </div>
+
+    <div class="container mt-5">
+        <h2>About the Author</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, libero sed ultrices tincidunt, libero turpis viverra nulla, nec tristique risus ante sit amet est.</p>
+        <hr>
     </div>
 
     <div class="container mt-5" id="contactSection">
